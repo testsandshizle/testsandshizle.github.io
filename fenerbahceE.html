@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Houston Fenerbahce Association Home</title>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Houston Fenerbahce Association</h1>
+    </header>
+
+    <nav>
+        <label for="language">Select Language:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="tr">Türkçe</option>
+        </select>
+    </nav>
+
+    <main>
+        <p id="greeting2">Houston Fenerbahce Association Homepage</p>
+        <a href="language.html" id="language">
+            <button><span id="homeText2">Language</span></button>
+        </a>
+        <br><br>
+    </main>
+
+    <footer><sh4>Site made by Web Hire Hub. </sh4>
+    <br> </footer>
+
+    <script>
+        function changeLanguage() {
+            var languageSelect = document.getElementById("language");
+            var selectedLanguage = languageSelect.value;
+
+            var greeting2 = document.getElementById("greeting2");
+            var homeText2 = document.getElementById("homeText2");
+
+            if (selectedLanguage === "en") {
+                greeting2.textContent = "Houston Fenerbahce Association Homepage";
+                homeText2.textContent = "Language";
+            } else if (selectedLanguage === "tr") {
+                greeting2.textContent = "Houston Fenerbahçe Derneği Ana Sayfa";
+                homeText2.textContent = "Dil";
+            }
+        }
+    </script>
+</body>
+
+</html>
